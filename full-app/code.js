@@ -48,7 +48,7 @@ function showSidebar() {
 
 
 /**
- * One off call to Gemini without batching.
+ * Send this text to Gemini for a response.
  * @param {string} inputText - The text for the API to process.
  * @customfunction
  */

@@ -12,7 +12,7 @@ Supercharge your Google Sheets workflows with the Gemini AI Add-on. Leverage Goo
 -   **Seamless Multilingual Communication:** Translate emails, documents, or customer messages accurately and in context, fostering global collaboration.
 -   **Flexible AI Models:** Choose from a range of Gemini models (Pro, Pro 1.5, Ultra) to tailor the AI's capabilities to your specific needs.
 -   **Efficient Batch Processing:** Run bulk AI operations on thousands of rows while you focus on other priorities.
--   **Free to Use:** The add-on is completely free. You may incur charges for Gemini API usage, but pricing is competitive.
+-   **Free to Use:** The add-on is completely free.
 
 **Transform Your Workflows:**
 
@@ -24,4 +24,5 @@ Supercharge your Google Sheets workflows with the Gemini AI Add-on. Leverage Goo
 **Unleash the Potential of AI in Your Spreadsheets Today!**
 
 *Disclaimer: All rights and copyright for Gemini, Sheets, and Google are owned by Google Inc.*
+
 Try it out in workspace here: https://workspace.google.com/marketplace/app/genai_in_sheets/108395012802

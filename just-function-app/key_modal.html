@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Key Configuration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+  <div class="container mt-2 px-0">
+    <section aria-labelledby="getKeyTitle">
+      <h5 id="getKeyTitle">Get a unique key</h5>
+      <p class="pb-3">
+        <small>You need an API key from Google to access Gemini for rate limiting and other purposes. The key is free
+          but
+          you can pay for higher limits if needed.<br>
+          <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer">Sign up here and tap Get
+            Key</a>.
+        </small>
+      </p>
+    </section>
+
+    <section aria-labelledby="consentTitle">
+      <h5 id="consentTitle">Consent to share with Google Gemini™</h5>
+      <p class="pb-3">
+        <small>By saving an API key and sending requests to Google’s Gemini™ AI models, you will be sharing data with
+          Google. You will only be sharing the information with the cell in which you run a Gemini request. This data is
+          subject to <a href="https://ai.google.dev/terms" target="_blank" rel="noopener noreferrer">Google’s Gemini
+            Terms</a>.
+        </small>
+      </p>
+    </section>
+
+    <form id="myForm" aria-label="API Key Form">
+      <div class="mb-3">
+        <label for="apiKey" class="form-label">Gemini API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" placeholder="API Key from AI Studio" class="form-control"
+          aria-describedby="keyHelp">
+        <small id="keyHelp" class="form-text text-muted">Don't add additional letters or you might get errors.</small>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary w-100" onclick="setKey()">Save key and agree</button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-secondary w-100" onclick="removeKey()">Remove existing API key</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function setKey() {
+      var apiKey = document.getElementById('apiKey').value;
+      google.script.run.setApiKey(apiKey);
+      google.script.host.close();
+    }
+
+    function removeKey() {
+      google.script.run.removeApiKey();
+      google.script.host.close();
+    }
+  </script>
+</body>
+
+</html>
